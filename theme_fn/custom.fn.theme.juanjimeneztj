@@ -1,0 +1,133 @@
+<?php
+// Functions to custom options in the theme
+function juanjimeneztj_customize_register($wp_customize){
+
+    $wp_customize->add_section('gsweb_juanjimeneztj_vip_btn', array(
+        'title' => __('VIP BUTTON', 'classifiedintelligencebrief'),
+        'priority' => 130,
+    ));
+
+    $wp_customize->add_setting('gsweb_juanjimeneztj_vip_btn_text', array(
+        'transport' => 'refresh',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_vip_btn_text',
+            array(
+                'label'          => __( 'Button Text:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_vip_btn',
+                'type'           => 'text',
+            )
+        )
+	);
+	
+	$wp_customize->add_setting('gsweb_juanjimeneztj_vip_btn_url', array(
+        'transport' => 'refresh',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_vip_btn_url',
+            array(
+                'label'          => __( 'Button URL:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_vip_btn',
+                'type'           => 'text',
+            )
+        )
+    );
+    
+    $wp_customize->add_section('gsweb_juanjimeneztj_top_navbar', array(
+        'title' => __('Top Navbar', 'classifiedintelligencebrief'),
+        'priority' => 130,
+    ));
+    
+    $wp_customize->add_setting('gsweb_juanjimeneztj_top_navbar_text_title', array(
+        'transport' => 'refresh',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_top_navbar_text_title',
+            array(
+                'label'          => __( 'Information to display on top of the page:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_top_navbar',
+                'type'           => 'text'
+            )
+        )
+    );
+	
+	$wp_customize->add_setting('gsweb_juanjimeneztj_top_navbar_text_btn', array(
+        'transport' => 'refresh',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_top_navbar_text_btn',
+            array(
+                'label'          => __( 'Button Text:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_top_navbar',
+                'type'           => 'text'
+            )
+        )
+	);
+	
+	$wp_customize->add_setting('gsweb_juanjimeneztj_top_navbar_text_url', array(
+        'transport' => 'refresh',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_top_navbar_text_url',
+            array(
+                'label'          => __( 'Button URL:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_top_navbar',
+                'type'           => 'text'
+            )
+        )
+    );
+	
+	$wp_customize->add_setting('gsweb_juanjimeneztj_top_navbar_text_color', array(
+		'transport' => 'refresh',
+		'default'   => '#ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_top_navbar_text_color',
+            array(
+                'label'          => __( 'Button Text Color:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_top_navbar',
+				'priority' => 1,
+            )
+        )
+	);
+	
+	$wp_customize->add_setting('gsweb_juanjimeneztj_top_navbar_text_nav_color', array(
+		'transport' => 'refresh',
+		'default'   => '#fa0000',
+		'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gsweb_juanjimeneztj_top_navbar_text_nav_color',
+            array(
+                'label'          => __( 'Navbar Background Color:', 'classifiedintelligencebrief' ),
+                'section'        => 'gsweb_juanjimeneztj_top_navbar',
+				'priority' => 1,
+            )
+        )
+    );
+    
+}
+
+add_action('customize_register', 'juanjimeneztj_customize_register');
