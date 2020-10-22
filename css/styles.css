@@ -73,6 +73,10 @@ html,body{
     font-size: 34px!important;
     font-weight: normal!important;
     padding: 5px!important;
+    width: 100%;
+}
+.btn-load-more:disabled,.btn-load-more:disabled:hover{
+    background-color: var(--gray)!important;
 }
 .btn.btn-no-rounded{
     border-radius: 0!important;

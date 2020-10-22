@@ -89,52 +89,48 @@ get_header();?>
                         <div class="row">
                             <div class="col">
                                 <div class="box">
-                                    <div class="row align-items-center">
-                                <?php 
-                                    $args = array (
-                                        'posts_per_page'         => '3',
-                                        'order'                  => 'DESC'
-                                    );
-                                    
-                                    $all_query = new WP_Query( $args );
-
-                                    if ($all_query->have_posts()) :
-                                        while ($all_query->have_posts()) : $all_query->the_post();
-                                ?>
+                                    <div class="row align-items-center" id="ajax-posts">
+                                        <?php 
+                                            $args = array (
+                                                'posts_per_page'         => '6',
+                                                'order'                  => 'DESC'
+                                            );
                                             
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                                            <article id="post-<?php the_ID();?>" <?php post_class();?>>
-                                                <div class="row">
-                                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                                        <a href="<?=get_the_permalink()?>">
-                                                            <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                                                        <h3 class="oswald text-uppercase"><a class="oswald text-uppercase" href="<?=get_the_permalink()?>"><?php the_title();?></a></h3>
-                                                        <p class="post-details"><?=get_the_author()?> &#124; <?=get_the_date()?></p>
-                                                        <div class="entry-content">
-                                                            <?php the_excerpt();?>
+                                            $all_query = new WP_Query( $args );
+
+                                            if ($all_query->have_posts()) :
+                                                while ($all_query->have_posts()) : $all_query->the_post();
+                                        ?>
+                                                    
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
+                                                    <article id="post-<?php the_ID();?>" <?php post_class();?>>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                <a href="<?=get_the_permalink()?>">
+                                                                    <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                                                <h3 class="oswald text-uppercase"><a class="oswald text-uppercase" href="<?=get_the_permalink()?>"><?php the_title();?></a></h3>
+                                                                <p class="post-details"><?=get_the_author()?> &#124; <?=get_the_date()?></p>
+                                                                <div class="entry-content">
+                                                                    <?php the_excerpt();?>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    </article>
                                                 </div>
-                                            </article>
-                                        </div>
-                                <?php 
-                                        endwhile;
-                                    endif;
-                                    wp_reset_postdata();
-                                ?>
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                                            <article>
-                                                <div class="row align-items-center justify-content-center">
-                                                    <div class="col text-center">
-                                                        <a href="#" class="btn btn-no-rounded text-uppercase oswald btn-load-more">Load More Articles</a>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
+                                        <?php 
+                                                endwhile;
+                                            endif;
+                                            wp_reset_postdata();
+                                        ?>
                                     </div>  
+                                    <div class="row">
+                                        <div class="col text-center mb-5">
+                                            <button type="button" class="btn btn-no-rounded text-uppercase oswald btn-load-more" id="more_posts">Load More Articles</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

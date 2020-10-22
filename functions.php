@@ -34,4 +34,7 @@ require_once 'theme_fn/widgets.fn.juanjimeneztj';
 // Functions to custom options in the theme
 require_once 'theme_fn/custom.fn.theme.juanjimeneztj';
 
+// Functions to load post by ajax
+require_once 'theme_fn/load_more.fn.juanjimeneztj';
+
 // End functions JUANJIMENEZTJ

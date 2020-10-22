@@ -46,5 +46,6 @@
             });
         </script>
         <script async src="<?=get_template_directory_uri()?>/js/menu.js"></script>
+        <script async src="<?=get_template_directory_uri()?>/js/loadmore.js"></script>
     </body>
 </html>
