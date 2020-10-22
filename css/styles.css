@@ -10,6 +10,7 @@
 :root{
     --primary: #CCAB6A;
     --secondary: #262e47;
+    --secondary-alternate: #192138;
     --hover: #b39354;
     --black: #000000;
     --gray: #cccccc;
@@ -22,9 +23,10 @@
     --header-links-hover: var(--black);
     --header-links-border: var(--black);
 
-    --footer-bg-color: var(--white);
-    --footer-links: var(--black);
-    --footer-links-hover: var(--black);
+    --footer-bg-color: var(--secondary);
+    --footer-links: var(--white);
+    --footer-links-hover: var(--white);
+    --footer-paragraph-color: var(--white);
 
     --bg-page-color: var(--secondary);
 
@@ -65,6 +67,15 @@ html,body{
 .btn:hover {
     background-color: var(--btn-bg-color-hover)!important;
     color: var(--btn-text-color-hover)!important;
+}
+.btn-load-more{
+    display: block!important;
+    font-size: 34px!important;
+    font-weight: normal!important;
+    padding: 5px!important;
+}
+.btn.btn-no-rounded{
+    border-radius: 0!important;
 }
 .text-justify{
     text-align: justify;
@@ -243,29 +254,21 @@ main.home-page .carousel-item p.post-details{
     font-size: 14px!important;
     text-transform: capitalize;
 }
+main.home-page .carousel-item p.label-gsweb{
+    background: var(--secondary);
+    display: inline-block;
+    font-size: 20px!important;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
 main.home-page .carousel-item p.post-btn{
     position: absolute;
     text-align: right!important;
-    right: 140px;
-    bottom: -40px;
+    right: 100px;
+    bottom: -80px;
     z-index: 2;
-}
-
-main.home-page .last-tech-talk-posts{
-    background-color: var(--secondary);
-    margin-top: 30px;
-    padding: 40px;
-}
-main.home-page .last-tech-talk-posts article h3,main.home-page .last-tech-talk-posts article h3 > a{
-    color: var(--white)
-}
-main.home-page .last-tech-talk-posts article p{
-    color: var(--white)
-}
-main.home-page .last-tech-talk-posts article a.btn-link{
-    color: var(--hover);
-    font-size: 24px;
-    font-weight: 300;
 }
 
 @media all and (max-width: 767px){
@@ -300,16 +303,13 @@ main.home-page .last-tech-talk-posts article a.btn-link{
     main.home-page .carousel-item p.post-btn a{
         font-size: 10px;
     }
-    main.home-page .last-tech-talk-posts{
-        padding: 20px;
-    }
 }
 
 /* 
     HOME PAGE AD
 */
 .block-home-page{
-    background-color: var(--secondary);
+    background-color: var(--secondary-alternate);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -346,9 +346,9 @@ main.archives .sidebar{
 }
 .recent-posts{
     background-color: var(--white);
-    border-top: 6px solid var(--primary);
+    border-top: 15px solid var(--primary);
     margin-top: 30px;
-    padding: 40px 40px 40px 10px;
+    padding: 40px 40px 0;
 }
 .recent-posts article{
     padding: 15px 0;
@@ -361,6 +361,11 @@ main.archives .sidebar{
 }
 .recent-posts article h3,.recent-posts article h3 > a{
     color: var(--black);
+}
+.recent-posts article p.post-details{
+    font-size: 14px;
+    color: var(--gray);
+    text-transform: capitalize;
 }
 main.archives .recent-posts{
     padding: 40px;
@@ -390,6 +395,7 @@ footer {
     padding: 60px 0 40px;
 }
 footer p{
+    color: var(--footer-paragraph-color);
     font-size: 14px;
     font-weight: 300;
     padding: 0 0 15px;

@@ -6,8 +6,8 @@
     
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <?=(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/twbs/bootstrap/dist/css/bootstrap.min.css'))?'<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">':'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';?>
-    <?=(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/chartexperts/vendor/fortawesome/font-awesome/css/all.min.css'))?'<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/fortawesome/font-awesome/css/all.min.css">':'<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">';?>
+    <?=(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/classifiedintelligencebrief/vendor/twbs/bootstrap/dist/css/bootstrap.min.css'))?'<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">':'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';?>
+    <?=(file_exists($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/classifiedintelligencebrief/vendor/fortawesome/font-awesome/css/all.min.css'))?'<link rel="stylesheet" href="'.get_template_directory_uri().'/vendor/fortawesome/font-awesome/css/all.min.css">':'<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">';?>
     
     <title>Classified Intelligence Brief</title>
 
@@ -62,9 +62,9 @@
                     <?php
                         if($gsweb_juanjimeneztj_vip_btn_url):
                     ?>
-                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="btn w-100"><?=$gsweb_juanjimeneztj_vip_btn?></a>
+                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="btn w-100 btn-no-rounded"><?=$gsweb_juanjimeneztj_vip_btn?></a>
                     <?php else: ?>
-                        <a href="#" class="btn"><?=$gsweb_juanjimeneztj_vip_btn?></a>
+                        <a href="#" class="btn btn-no-rounded"><?=$gsweb_juanjimeneztj_vip_btn?></a>
                     <?php endif; ?>
                 </div>
             <?php else: ?>
