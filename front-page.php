@@ -71,40 +71,17 @@ get_header();?>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                <?php if ( is_active_sidebar( 'home-page-widget' ) ) : ?>
-                    <div id="home-page-widget" class="primary-sidebar widget-area" role="complementary">
-                        <?php dynamic_sidebar( 'home-page-widget' ); ?>
-                    </div>
-                <?php endif; ?>
                 <div class="block-home-page" style="background-image: url('http://localhost/FinMC/2020/classifiedintelligencebrief/wordpress/wp-content/uploads/2020/10/bg3.png');">
                     <h1 class="text-uppercase oswald">
                         Get Dr. Moor&#39;s Briefs <br class="d-none d-md-block" />
                         <strong>In Your Inbox</strong> <br class="d-none d-md-block" />
                         <span class="oswald">As Soon As They Come Out</span>
                     </h1>
-                    <form id="sf_form_salesforce_w2l_lead_2_sidebar" class="w2llead top-aligned" method="post" action="#sf_form_salesforce_w2l_lead_2_sidebar" name="frmHome">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="first_name" id="sf_first_name" required />
+                    <?php if ( is_active_sidebar( 'home-page-widget' ) ) : ?>
+                        <div id="home-page-widget" class="primary-sidebar widget-area" role="complementary">
+                            <?php dynamic_sidebar( 'home-page-widget' ); ?>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope-open"></i></span>
-                            </div>
-                            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2" name="email" id="sf_email" required />
-                        </div>
-                        <input type="hidden" id="sf_Campaign_ID" class="w2linput hidden" name="Campaign_ID" value="7016g000000NCDlAAO">		
-                        <!--<div class="sf_field sf_field_cb sf_type_checkbox sf_cc_user">
-                            <label class="w2llabel checkbox w2llabel-checkbox-label">
-                                <input type="checkbox" name="w2lcc" class="w2linput checkbox" value="1"> Send me a copy
-                            </label>
-                        </div>	-->
-                        <input type="text" name="message" class="w2linput" value="" style="display: none;">	
-                        <input type="hidden" name="form_id" class="w2linput" value="2">
-                        <button type="submit" name="w2lsubmit" class="btn d-block w-100 oswald text-uppercase">Sign Up Today</button>
-                    </form>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

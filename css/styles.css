@@ -376,7 +376,7 @@ main.home-page .cib-about p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 30px 40px;
+    padding: 0 40px;
     text-align: center;
 }
 .block-home-page h1{
@@ -396,12 +396,72 @@ main.home-page .cib-about p{
     font-size: 35px;
 }
 .block-home-page input{
-    font-size: 18px;
+    font-size: 19px!important;
+    padding: 10px 10px 10px 50px;
+    width: 100%!important;
 }
-.block-home-page .btn{
+.block-home-page p{
+    color: var(--white)!important
+}
+.block-home-page .sf_field {
+    position: relative;
+}
+.block-home-page .sf_field_first_name::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: '\f007';
+    font-size: 20px;
+    color:var(--secondary-alternate);
+    font-family: 'Font Awesome\ 5 Free';
+    background: #E9ECEF;
+    border-right: 1px solid #ccc;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.block-home-page .sf_field_email::before {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    content: '\f2b6';
+    font-size: 20px;
+    color:var(--secondary-alternate);
+    font-family: 'Font Awesome\ 5 Free';
+    background: #E9ECEF;
+    border-right: 1px solid #ccc;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.block-home-page .sf_field_cb{
+    display: none!important;
+}
+.block-home-page label.text{
+    display: none!important;
+}
+.block-home-page .w2linput.submit{
     font-size: 22px;
+    line-height: 22px!important;
+    font-family: var(--oswald);
+    border: none!important;
     padding: 10px!important;
     width: 100%;
+    margin-top: 0!important;
+    background-color: var(--btn-bg-color)!important;
+    color: var(--btn-text-color)!important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.block-home-page .w2linput.submit:hover {
+    background-color: var(--btn-bg-color-hover)!important;
+    color: var(--btn-text-color-hover)!important;
 }
 
 @media all and (max-width: 991px){
