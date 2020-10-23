@@ -372,7 +372,7 @@ main.home-page .cib-about p{
     HOME PAGE AD
 */
 .block-home-page{
-    background-color: var(--white);
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,7 +380,7 @@ main.home-page .cib-about p{
     text-align: center;
 }
 .block-home-page h1{
-    color: var(--secondary);
+    color: var(--white);
     font-weight: 500;
     font-size: 40px;
     line-height: 42px;

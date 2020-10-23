@@ -82,20 +82,28 @@ get_header();?>
                         <strong>In Your Inbox</strong> <br class="d-none d-md-block" />
                         <span class="oswald">As Soon As They Come Out</span>
                     </h1>
-                    <form action="./" method="post" name="frmHome" id="frmHome">
+                    <form id="sf_form_salesforce_w2l_lead_2_sidebar" class="w2llead top-aligned" method="post" action="#sf_form_salesforce_w2l_lead_2_sidebar" name="frmHome">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="inf_name" id="inf_name" required />
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="first_name" id="sf_first_name" required />
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope-open"></i></span>
                             </div>
-                            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="inf_email" id="inf_email" required />
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2" name="email" id="sf_email" required />
                         </div>
-                        <button type="submit" form="frmHome" class="btn d-block w-100 oswald text-uppercase">Sign Up Today</button>
+                        <input type="hidden" id="sf_Campaign_ID" class="w2linput hidden" name="Campaign_ID" value="7016g000000NCDlAAO">		
+                        <!--<div class="sf_field sf_field_cb sf_type_checkbox sf_cc_user">
+                            <label class="w2llabel checkbox w2llabel-checkbox-label">
+                                <input type="checkbox" name="w2lcc" class="w2linput checkbox" value="1"> Send me a copy
+                            </label>
+                        </div>	-->
+                        <input type="text" name="message" class="w2linput" value="" style="display: none;">	
+                        <input type="hidden" name="form_id" class="w2linput" value="2">
+                        <button type="submit" name="w2lsubmit" class="btn d-block w-100 oswald text-uppercase">Sign Up Today</button>
                     </form>
                 </div>
             </div>
