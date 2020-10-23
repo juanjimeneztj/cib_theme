@@ -77,8 +77,26 @@ get_header();?>
                     </div>
                 <?php endif; ?>
                 <div class="block-home-page" style="background-image: url('http://localhost/FinMC/2020/classifiedintelligencebrief/wordpress/wp-content/uploads/2020/10/bg3.png');">
-                    <h1 class="text-uppercase">Lorem Ipsum</h1>
-                    <a href="#" class="btn oswald text-uppercase">Get It Now</a>
+                    <h1 class="text-uppercase oswald">
+                        Get Dr. Moor&#39;s Briefs <br class="d-none d-md-block" />
+                        <strong>In Your Inbox</strong> <br class="d-none d-md-block" />
+                        <span class="oswald">As Soon As They Come Out</span>
+                    </h1>
+                    <form action="./" method="post" name="frmHome" id="frmHome">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="inf_name" id="inf_name" required />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope-open"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="inf_email" id="inf_email" required />
+                        </div>
+                        <button type="submit" form="frmHome" class="btn d-block w-100 oswald text-uppercase">Sign Up Today</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -102,15 +120,15 @@ get_header();?>
                                                 while ($all_query->have_posts()) : $all_query->the_post();
                                         ?>
                                                     
-                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4">
                                                     <article id="post-<?php the_ID();?>" <?php post_class();?>>
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                                                                 <a href="<?=get_the_permalink()?>">
                                                                     <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
                                                                 </a>
                                                             </div>
-                                                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
                                                                 <h3 class="oswald text-uppercase"><a class="oswald text-uppercase" href="<?=get_the_permalink()?>"><?php the_title();?></a></h3>
                                                                 <p class="post-details"><?=get_the_author()?> &#124; <?=get_the_date()?></p>
                                                                 <div class="entry-content">

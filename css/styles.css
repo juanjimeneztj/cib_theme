@@ -276,6 +276,9 @@ main.home-page .carousel-item p.post-btn{
 }
 
 @media all and (max-width: 767px){
+    main.home-page .carousel-item{
+        text-align: center;
+    }
     main.home-page .carousel-item h1{
         font-size: 20px;
         text-align: center;
@@ -288,7 +291,7 @@ main.home-page .carousel-item p.post-btn{
         text-align: center;
     }
     main.home-page .carousel-inner {
-        height: 180px;
+        height: 215px;
     }
     main.home-page .carousel-item .description-Item{
         position: absolute;
@@ -307,26 +310,66 @@ main.home-page .carousel-item p.post-btn{
     main.home-page .carousel-item p.post-btn a{
         font-size: 10px;
     }
+    main.home-page .carousel-item p.label-gsweb{
+        font-size: 10px!important;
+        line-height: 10px;
+        padding: 5px 15px;
+    }
 }
 
 /* 
     HOME PAGE AD
 */
 .block-home-page{
-    background-color: var(--secondary-alternate);
+    background-color: var(--white);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 80px 40px;
+    padding: 30px 40px;
     text-align: center;
 }
 .block-home-page h1{
-    color: var(--white);
-    font-weight: bold;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 42px;
 }
-.block-home-page a.btn{
-    font-size: 20px;
+.block-home-page h1 > strong{
+    color: var(--hover);
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 58px;
+}
+.block-home-page h1 > span{
+    font-weight: 500;
+    font-size: 35px;
+}
+.block-home-page input{
+    font-size: 18px;
+}
+.block-home-page .btn{
+    font-size: 22px;
+    padding: 10px!important;
     width: 100%;
+}
+
+@media all and (max-width: 991px){
+    .block-home-page{
+        margin-top: 30px!important;
+    }
+}
+@media all and (max-width: 767px){
+    .block-home-page h1{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .block-home-page h1 > strong{
+        padding-top: 5px;
+        font-size: 36px;
+    }
+    .block-home-page h1 > span{
+        font-size: 22px;
+    }
 }
 
 /* 
@@ -339,14 +382,30 @@ main.archives .sidebar{
     padding: 30px 0;
 }
 .block-title{
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
+    padding: 140px 0;
+    position: relative;
+}
+.block-title::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255,0.8);
+    height: 100%;
 }
 .block-title h1{
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 60px;
+    text-align: center;
+}
+.block-title p{
+    color: var(--secondary-alternate);
+    font-size: 16px;
+    text-align: center;
 }
 .recent-posts{
     background-color: var(--white);
@@ -375,12 +434,14 @@ main.archives .recent-posts{
     padding: 40px;
 }
 
+@media all and (max-width: 991px){
+    .recent-posts article img{
+        padding: 15px 0;
+    }
+}
 @media all and (max-width: 767px){
     .recent-posts,main.archives .recent-posts{
         padding: 20px;
-    }
-    .recent-posts article img{
-        padding: 15px 0;
     }
 }
 

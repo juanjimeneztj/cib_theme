@@ -2,12 +2,16 @@
     defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
     get_header();
+
+    if (have_posts()) :
+        while (have_posts()) : the_post();
 ?>
-    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_weekly.jpg');">
+    <div class="block-title" style="background-image: url('<?=get_the_post_thumbnail_url()?>');">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="oswald text-uppercase">Weekly Spotlight</h1>
+                    <h1 class="oswald text-uppercase"><?=the_title();?></h1>
+                    <p><small><?=get_the_author()?> | <?=get_the_date()?></small></p>
                 </div>
             </div>
         </div>
@@ -20,30 +24,15 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col">
-                                    <?php 
-                                        if (have_posts()) :
-                                            while (have_posts()) : the_post();
-                                    ?>
-                                                <article id="post-<?=the_ID();?>" <?=post_class();?>>
-                                                    <div class="row">
-                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
-                                                            <h3 class="oswald text-uppercase"><?=the_title();?></h3>
-                                                            <p><small><?=get_the_author()?> | <?=get_the_date()?></small></p>
-                                                            
-                                                            <img src="<?=get_the_post_thumbnail_url()?>" class="img-fluid" alt="Responsive image">
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
-                                                            <div class="entry-content">
-                                                                <?=the_content();?>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                    <?php 
-                                            endwhile;
-                                        endif;
-                                        wp_reset_postdata();
-                                    ?>
+                                    <article id="post-<?=the_ID();?>" <?=post_class();?>>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
+                                                <div class="entry-content">
+                                                    <?=the_content();?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -52,9 +41,9 @@
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                     <aside class="sidebar">
-                        <?php if ( is_active_sidebar( 'sidebar-weekly-widget' ) ) : ?>
-                            <div id="sidebar-weekly-widget" class="primary-sidebar widget-area" role="complementary">
-                                <?php dynamic_sidebar( 'sidebar-weekly-widget' ); ?>
+                        <?php if ( is_active_sidebar( 'sidebar-post-widget' ) ) : ?>
+                            <div id="sidebar-post-widget" class="primary-sidebar widget-area" role="complementary">
+                                <?php dynamic_sidebar( 'sidebar-post-widget' ); ?>
                             </div>
                         <?php endif; ?>
                     </aside>
@@ -63,6 +52,8 @@
         </div><!-- container -->
     </main>
 <?php
+        endwhile;
+    endif;
     wp_reset_postdata();
 
     get_footer();

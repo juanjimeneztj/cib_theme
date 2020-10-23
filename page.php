@@ -6,7 +6,7 @@
     if (have_posts()) :
         while (have_posts()) : the_post();
 ?>
-    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_weekly.jpg');">
+    <div class="block-title" style="background-image: url('<?=get_template_directory_uri()?>/images/bg_page.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col">

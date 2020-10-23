@@ -8,7 +8,7 @@
     @import url(https://fonts.googleapis.com/css?family=opensans:500);
 body{
                 background: #ffffff;
-                color:#1DA913;
+                color:#262e47;
                 font-family: 'Open Sans', sans-serif;
                 max-height:700px;
                 overflow: hidden;
@@ -57,7 +57,7 @@ body{
            
 
             .btn{
-                background-color: #087F00;
+                background-color: #CCAB6A;
                 position: relative;
                 display: inline-block;
                 width: 358px;
@@ -65,7 +65,7 @@ body{
                 z-index: 5;
                 font-size: 25px;
                 margin:0 auto;
-                color:#041E0D;
+                color:#fff;
                 text-decoration: none;
                 margin-right: 10px
             }

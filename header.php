@@ -35,30 +35,16 @@
 <header>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-4 col-lg-3 col-lx-3">
-                    <div class="logo-header"><?=get_custom_logo()?></div>
-            </div>
             <?php
                 $gsweb_juanjimeneztj_vip_btn = get_theme_mod('gsweb_juanjimeneztj_vip_btn_text');
                 $gsweb_juanjimeneztj_vip_btn_url = get_theme_mod('gsweb_juanjimeneztj_vip_btn_url');
                 
                 if($gsweb_juanjimeneztj_vip_btn):
             ?>
-                <div class="col col-md-8 col-lg-7 col-lx-7 d-flex justify-content-end">
-                    <div class="mobile-mnu">
-                        <i class="fas fa-bars"></i>
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="navigation-header d-flex align-middle">
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'header-menu',
-                                'menu_id' => 'header-menu',
-                            ));
-                        ?>
-                    </div>
+                <div class="col-12 col-md-4 col-lg-9 col-xl-10">
+                    <div class="logo-header"><?=get_custom_logo()?></div>
                 </div>
-                <div class="col-12 col-sm-12 c-l-md-12 col-lg-2 col-lx-2 d-flex justify-content-end">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2 d-flex justify-content-end">
                     <?php
                         if($gsweb_juanjimeneztj_vip_btn_url):
                     ?>
@@ -68,15 +54,8 @@
                     <?php endif; ?>
                 </div>
             <?php else: ?>
-                <div class="col col-md-8 col-lg-9 col-lx-9 d-flex justify-content-end">
-                    <div class="navigation-header">
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'header-menu',
-                                'menu_id' => 'header-menu',
-                            ));
-                        ?>
-                    </div>
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="logo-header"><?=get_custom_logo()?></div>
                 </div>
             <?php endif; ?>
         </div>

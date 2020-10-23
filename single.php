@@ -9,12 +9,6 @@ endif;
 
 $catName = str_replace(" ","-",$cat[0]->cat_name);
 switch ($catName) {
-    case 'weekly-spotlight':
-        get_template_part( 'template_parts/singles/single', $catName );
-        break;
-    case 'tech-talk':
-        get_template_part( 'template_parts/singles/single', $catName );
-        break;
     default:
         get_template_part( 'template_parts/singles/single', 'default' );
         break;
