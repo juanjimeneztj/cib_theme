@@ -274,6 +274,45 @@ main.home-page .carousel-item p.post-btn{
     bottom: -80px;
     z-index: 2;
 }
+main.home-page .cib-about{
+    background: var(--white);
+    border-top: 15px solid var(--primary);
+    margin: 30px auto;
+    padding-right: 40px;
+}
+main.home-page .cib-about img{
+    height: auto;
+    padding-top: 50px;
+    max-width: 500px;
+    width: 100%;
+    vertical-align: bottom;
+}
+main.home-page .cib-about h2{
+    color: var(--hover);
+    font-size: 44px;
+    line-height: 50px;
+}
+main.home-page .cib-about p{
+    font-size: 19px;
+    line-height: 30px;
+}
+
+@media all and (max-width: 1250px){
+    main.home-page .cib-about{
+        padding: 40px;
+    }
+    main.home-page .cib-about .img-moors{
+        text-align: center;
+    }
+    main.home-page .cib-about img{
+        padding: 0 0 20px;
+        max-width: 300px;
+    }
+    main.home-page .cib-about p{
+        font-size: 19px;
+        line-height: 30px;
+    }
+}
 
 @media all and (max-width: 767px){
     main.home-page .carousel-item{
@@ -314,6 +353,10 @@ main.home-page .carousel-item p.post-btn{
         font-size: 10px!important;
         line-height: 10px;
         padding: 5px 15px;
+    }
+    main.home-page .cib-about p{
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
