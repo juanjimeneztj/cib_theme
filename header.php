@@ -36,21 +36,21 @@
     <div class="container">
         <div class="row align-items-center">
             <?php
-                $gsweb_juanjimeneztj_vip_btn = get_theme_mod('gsweb_juanjimeneztj_vip_btn_text');
+                $gsweb_juanjimeneztj_vip_btn = get_theme_mod('gsweb_juanjimeneztj_vip_btn_logo');
                 $gsweb_juanjimeneztj_vip_btn_url = get_theme_mod('gsweb_juanjimeneztj_vip_btn_url');
                 
                 if($gsweb_juanjimeneztj_vip_btn):
             ?>
-                <div class="col-12 col-md-4 col-lg-9 col-xl-10">
+                <div class="col-12 col-md-6 col-lg-9 col-xl-10">
                     <div class="logo-header"><?=get_custom_logo()?></div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2 d-flex justify-content-end">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-2 d-flex justify-content-end">
                     <?php
                         if($gsweb_juanjimeneztj_vip_btn_url):
                     ?>
-                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="btn w-100 btn-no-rounded"><?=$gsweb_juanjimeneztj_vip_btn?></a>
+                        <a href="<?=$gsweb_juanjimeneztj_vip_btn_url?>" class="w-100 text-center"><img class="img-fluid ri-logo" src="<?=$gsweb_juanjimeneztj_vip_btn?>" /></a>
                     <?php else: ?>
-                        <a href="#" class="btn btn-no-rounded"><?=$gsweb_juanjimeneztj_vip_btn?></a>
+                        <a href="#" class="w-100 text-center"><img class="img-fluid ri-logo" src="<?=$gsweb_juanjimeneztj_vip_btn?>" /></a>
                     <?php endif; ?>
                 </div>
             <?php else: ?>

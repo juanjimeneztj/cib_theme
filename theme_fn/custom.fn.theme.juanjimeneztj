@@ -7,21 +7,21 @@ function juanjimeneztj_customize_register($wp_customize){
         'priority' => 130,
     ));
 
-    $wp_customize->add_setting('gsweb_juanjimeneztj_vip_btn_text', array(
+    $wp_customize->add_setting('gsweb_juanjimeneztj_vip_btn_logo', array(
         'transport' => 'refresh',
     ));
-    
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gsweb_juanjimeneztj_vip_btn_text',
+
+    $wp_customize->add_control( 
+        new WP_Customize_Image_Control( 
+            $wp_customize, 
+            'gsweb_juanjimeneztj_vip_btn_logo', 
             array(
-                'label'          => __( 'Button Text:', 'classifiedintelligencebrief' ),
-                'section'        => 'gsweb_juanjimeneztj_vip_btn',
-                'type'           => 'text',
+                'label'             => __('Logo', 'classifiedintelligencebrief'),
+                'section'           => 'gsweb_juanjimeneztj_vip_btn',
+                'settings'          => 'gsweb_juanjimeneztj_vip_btn_logo',
             )
         )
-	);
+    );
 	
 	$wp_customize->add_setting('gsweb_juanjimeneztj_vip_btn_url', array(
         'transport' => 'refresh',

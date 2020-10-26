@@ -122,6 +122,11 @@ header {
     max-width: 400px;
     width: 100%;
 }
+.ri-logo{
+    height: auto!important;
+    max-width: 140px!important;
+    width: 100%!important;
+}
 .mobile-mnu{
     cursor: pointer;
     display: none;
