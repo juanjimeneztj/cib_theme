@@ -73,9 +73,9 @@ get_header();?>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                 <div class="block-home-page" style="background-image: url('http://localhost/FinMC/2020/classifiedintelligencebrief/wordpress/wp-content/uploads/2020/10/bg3.png');">
                     <h1 class="text-uppercase oswald">
-                        Get Dr. Moor&#39;s Insights <br class="d-none d-md-block" />
+                        Get Dr. Moors&#39; Intel <br class="d-none d-md-block" />
                         <strong>In Your Inbox</strong> <br class="d-none d-md-block" />
-                        <span class="oswald">As Soon As They Come Out</span>
+                        <span class="oswald">As Soon As It&#39;s Available</span>
                     </h1>
                     <?php if ( is_active_sidebar( 'home-page-widget' ) ) : ?>
                         <div id="home-page-widget" class="primary-sidebar widget-area" role="complementary">
