@@ -299,6 +299,9 @@ main.home-page .cib-about{
     margin: 30px auto;
     padding-right: 40px;
 }
+main.home-page .cib-about .description{
+    padding: 50px 20px;
+}
 main.home-page .cib-about img{
     height: auto;
     padding-top: 50px;
@@ -372,6 +375,9 @@ main.home-page .cib-about p{
         font-size: 10px!important;
         line-height: 10px;
         padding: 5px 15px;
+    }
+    main.home-page .cib-about .description{
+        padding: 20px 0;
     }
     main.home-page .cib-about p{
         font-size: 16px;

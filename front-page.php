@@ -144,20 +144,30 @@ get_header();?>
         <div class="row">
             <div class="col">
                 <div class="cib-about">
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
                             <div class="img-moors">
                                 <img src="<?=get_template_directory_uri()?>/images/dr_moors.png" alt="Dr. Moors">   
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
-                            <h3>About</h3>
+                            <div class="description">
+                                <h3>About</h3>
 
-                            <h2 class="text-uppercase oswald">Dr. Kent Moors</h2>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, in consequatur accusantium officiis doloremque possimus! Molestiae ducimus sed commodi veritatis, culpa omnis totam tempore beatae. Voluptatem maxime quas quod.</p>
+                                <h2 class="text-uppercase oswald">Dr. Kent Moors</h2>
+                                
+                                <p>Dr. Kent Moors is a major figure in global investment, risk assessment, finance, and public policy analysis. His high-profile visibility and over forty years of advising the largest international energy producers, a wide array of US and foreign companies, 29 world governments, US governors, Canadian premiers, and market makers in 32 countries has resulted in an extensive network of personal contacts, an “early detection” system for maximizing investment profits.</p>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet nihil sunt incidunt quo, vitae magni maiores porro sapiente corrupti reprehenderit et suscipit quasi voluptas quisquam deleniti eos praesentium natus illum debitis? Voluptates, molestias. Aspernatur sit quia ipsum doloremque eum eos officia optio, non hic placeat iure ullam id rerum, ratione nisi iste nam neque saepe quasi cupiditate. Placeat ad ex numquam assumenda maiores ea vel quos aut esse dignissimos fugiat, reprehenderit eius sequi fuga dolore, unde dolor quis ipsum!</p>
+                                <p>Having guided governments, corporations, financial institutions, institutional investors, hedge funds, Wall Street analysts, and capital/asset managers worldwide, over a decade ago Dr. Moors turned his attention to helping average individual investors. What then followed was an amazing record of making profits for his subscribers.   </p>
+
+                                <p>He has combined four successful careers – university professor and scholar; global energy advising; geopolitical and economic risk assessment; and intelligence officer. Often these would run simultaneously, resulting in a unique ability to make people money while negotiating rapidly changing markets and events. </p>
+
+                                <p>Dr. Moors is particularly known among policy makers for providing targeted political, market and risk assessments in crises or rapidly changing environments He is a leading “go-to” consultant for public and private sector entities addressing geopolitical developments impacting policy and security concerns. In addition to a range of energy-related topics, he has most recently advised on US-Chinese trade disagreements, fallout from the Iranian sanctions, the Saudi-Qatari diplomatic impasse, instability in Venezuela, and the South China Sea crisis. </p>
+
+                                <p>Dr. Moors has appeared over 2,600 times as a featured television, radio and media commentator in North America, Europe and Russia—including ABC, BBC, Bloomberg TV, Canadian CBC, CBS, Chinese CGTN, CNBC, CNN, Fox Business Network, NBC and Russian RTV, REN, and STS networks. A prolific writer and lecturer, his over 3,400 professional/market publications and over 800 private/public sector presentations and workshops have appeared in 47 countries. </p>
+
+                                <p>His first degree (at age 16) was a B.S. in theoretical physics. Subsequent A.B., M.A. and Ph.D. degrees were obtained in political science and public policy.”</p>
+                            </div>
                         </div>
                     </div>
                 </div>
