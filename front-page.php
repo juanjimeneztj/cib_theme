@@ -71,7 +71,7 @@ get_header();?>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                <div class="block-home-page" style="background-image: url('http://localhost/FinMC/2020/classifiedintelligencebrief/wordpress/wp-content/uploads/2020/10/bg3.png');">
+                <div class="block-home-page">
                     <h1 class="text-uppercase oswald">
                         Get Dr. Moors&#39; Intel <br class="d-none d-md-block" />
                         <strong>In Your Inbox</strong> <br class="d-none d-md-block" />
